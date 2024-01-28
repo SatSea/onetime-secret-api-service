@@ -5,7 +5,6 @@ from Crypto.Util.Padding import unpad
 
 
 def decrypt_secret(encrypted_secret: str, hashed_secret_phrase: bytes) -> str:
-    print(hashed_secret_phrase, len(hashed_secret_phrase))
     cipher = AES.new(hashed_secret_phrase, AES.MODE_ECB)
 
     decrypted_data = cipher.decrypt(b64decode(encrypted_secret))

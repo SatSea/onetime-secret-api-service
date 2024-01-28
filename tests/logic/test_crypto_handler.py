@@ -13,11 +13,11 @@ class TestCryptoHandler(unittest.TestCase):
 
         self.assertEqual(
             encrypted_secret,
-            "H9+GakpeFa1rStyTGH3la5eRZXqVCo+chLxGEJmLJjfGspD4ndHOv7l7nT5uDeKxn//Xnj7LHTUnNyYGxgp3H4AR8EDzcdfxXZXIBucNpQ+fUhKKUuVM1NJByXOeKUsi",
+            "CSkzqhAGcpz16PA0qlGWGmyGiIt04pz7Xq$1LxKdv$KbzYz$5wJSwf9EHWtYTZEqUsfwSWgjWNyeC4Y+$WempeZyVQZRDR+FtBFtRqsUpe4wkqM2oMYnMU2wanFgx84o",
         )
         self.assertEqual(
             hashed_phrase,
-            "65ac3abc8b9ddc8587197a9240e3263cf8cd4ef87ef3dd2f8d796fb6ef717c79",
+            "0fd69245f2faf10a82e4265b5c326da920feea897048bfa924bd035df967f19d",
         )
 
     def test_hash_secret_phrase(self):
