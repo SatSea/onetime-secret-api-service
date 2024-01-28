@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["satsea <satsea@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pycryptodome = "^3.20.0"
+motor = "^3.3.2"
+uvicorn = "^0.27.0"
+fastapi = "^0.109.0"
+
+[tool.poetry.scripts]
+test = "tests.run:run"
+start = "app.run:start"
+prod = "app.run:prod"
+
+[tool.coverage.run]
+source = ["app"]
+
+[tool.coverage.report]
+omit = ["tests/*", "*/__init__.py"]
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^7.4.1"
+httpx = "^0.26.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
